@@ -9,7 +9,7 @@
 - you can download Gitkraken [here](https://www.gitkraken.com/)
 - A Gitkraken workflow is well expained [here](https://www.youtube.com/watch?v=j_qpzND5yAg)
 
-### Commandline worklfow
+### Commandline workflow
 
 - The following steps were derived from [this tutorial video](https://www.youtube.com/watch?v=deEYHVpE1c8&t=480s)
 
