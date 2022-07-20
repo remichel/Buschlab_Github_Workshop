@@ -3,6 +3,8 @@
 ### The Basics
 
 
+![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/basics1.png)
+![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/basics2.png)
 ![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/fork1.png)
 
 ### What is a fork?
