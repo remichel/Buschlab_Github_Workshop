@@ -21,7 +21,11 @@ Another important feature is branching. By default, your project will only have 
 
 However, sometimes you might only want to merge a few selected changes from a branch into another branch. While a `merge` will always incorporate all changes into the target branch, the `cherry-pick` allows you to select only the desired changes and applies them to the target branch. Especially in our case in which we will most likely change a lot of aspects of the template EEG analysis pipeline, most of these changes will be project-specific, while only a few will be bug-fixes or general improvements that might be relevant to be merged into the template pipeline. Here, the cherry-pick command comes in very handy!
 
-![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/cherrypick1.png)
+
+<p align="center">
+  <img src="https://github.com/remichel/fork_it_like_its_hot/blob/master/cherrypick1.png"/>
+</p>
+
 
 
 ##### Forking 
@@ -36,7 +40,12 @@ For the EEG pipeline scenario, the `buschlab-muenster` pipeline repository will 
 
 ![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/fork3.png)
 
-As long as you will have only a single project involving EEG preprocessing, this workflow will suffice to conveniently (1) use the default pipeline as a starting point, (2) easily fetch updates from the upstream, and (3) send pull-requests for e.g. bug-fixes or additional features. However, if you have more than a single project ongoing involving EEG, you will realize that Github does not allow for forking the same repository multiple times. Therefore, a slightly adjusted setup is required (see the Figure below): Instead of having a master branch (storing your project-specific preprocessing pipeline) and a pr branch (containing the upstream version of the pipeline AND your suggested changes to it), you will use the master branch as the exact copy of the upstream repository (i.e. it now has the role of the pr branch), and create a branch for every project you start (e.g. name the branches after your projects). This means that you will need to checkout and work in the project branches most of the times, while leaving the master branch untouched. Now, if you want to suggest any changes from one of your projects' code to the upstream repo, cherry-pick this commit and add it to your fork's master branch. Now, you can send a pull-request to merge your master into the upstream master. Vice versa, if there are any changes in the upstream, merge those into your master branch first, and then incorporate those changes also into your project branches if necessary.
+As long as you will have only a single project involving EEG preprocessing, this workflow will suffice to conveniently (1) use the default pipeline as a starting point, (2) easily fetch updates from the upstream, and (3) send pull-requests for e.g. bug-fixes or additional features. 
+
+However, if you have more than a single project ongoing involving EEG, you will realize that Github does not allow for forking the same repository multiple times. Therefore, a slightly adjusted setup is required (see the Figure below): Instead of having a master branch (storing your project-specific preprocessing pipeline) and a pr branch (containing the upstream version of the pipeline AND your suggested changes to it), you will use the master branch as the exact copy of the upstream repository (i.e. it now has the role of the pr branch), and create a branch for every project you start (e.g. name the branches after your projects). This means that you will need to checkout and work in the project branches most of the times, while leaving the master branch untouched. Now, if you want to suggest any changes from one of your projects' code to the upstream repo, cherry-pick this commit and add it to your fork's master branch. Now, you can send a pull-request to merge your master into the upstream master. Vice versa, if there are any changes in the upstream, merge those into your master branch first, and then incorporate those changes also into your project branches if necessary. 
+
+Once one of your projects is ready for submission/publication, you might want to share the code in a convenient way. One option to do so is a GitHub release of the respective project branch (you can find a description of a Github release [here](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)). Alternatively, you can of course also paste the final version of the project's code into a new stand-alone repository and refer to this new repo in your publication.
+
 
 ![alt text](https://github.com/remichel/fork_it_like_its_hot/blob/master/workflow1.png)
 
